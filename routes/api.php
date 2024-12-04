@@ -12,3 +12,6 @@ use App\Http\Controllers\Api\UserController;
 // Get User Info
 Route::get('/user/{user}/', [UserController::class, 'getUser']);
 Route::get('/users', [UserController::class, 'getUsers']);
+
+// Get User Posts
+Route::get('/user/{user}/posts', [PostController::class, 'getUserPosts']);

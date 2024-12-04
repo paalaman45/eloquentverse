@@ -11,6 +11,8 @@ class PostController extends Controller
 {
     public function getUserPosts(User $user)
     {
-        return 1;
+        $posts = $user->posts()->get();
+
+        return response()->json($posts, 200);
     }
 }
