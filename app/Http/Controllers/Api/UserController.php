@@ -24,8 +24,8 @@ class UserController extends Controller
 
     public function userProfile(User $user)
     {
-        $profile = $user->profile()->get();
-
+        $profile = User::with('profile')->find($user->id);
+        
         return response()->json($profile, 200);
     }
 
