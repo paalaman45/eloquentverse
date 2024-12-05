@@ -15,3 +15,4 @@ Route::get('/users', [UserController::class, 'getUsers']);
 
 // Get User Posts
 Route::get('/user/{user}/posts', [PostController::class, 'getUserPosts']);
+Route::get('/user/{user}/profile', [UserController::class, 'userProfile']);
